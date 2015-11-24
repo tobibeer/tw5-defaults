@@ -1,0 +1,14 @@
+created: 20150109114505490
+modified: 20150114111445596
+summary: outputs a definition list of summaries for tiddlers matching a filter, by default tagging to the current tiddler
+tags: $:/tags/Macro
+title: $:/.tb/macros/summaries
+
+\define summaries(filter:"[tag{!!title}sort[]]")
+<dl>
+<$list filter="$filter$">
+<dt><$link to=<<currentTiddler>>><$view field=title/></$link></dt>
+<dd>@@color:grey;//{{!!summary}}//@@</dd>
+</$list>
+</dl>
+\end

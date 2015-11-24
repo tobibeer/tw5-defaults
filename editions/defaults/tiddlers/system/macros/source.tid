@@ -1,0 +1,13 @@
+created: 20141117160505514
+creator: Tobias Beer
+modified: 20141203221647345
+modifier: Tobias Beer
+summary: displays a link to a tiddler and its source in a codeblock
+tags: $:/tags/Macro
+title: $:/.tb/macros/source
+
+\define source(source)
+[[$source$]]:
+
+<pre><$view tiddler="$source$" format="text"/></pre>
+\end

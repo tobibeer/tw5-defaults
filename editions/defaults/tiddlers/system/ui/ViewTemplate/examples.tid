@@ -1,0 +1,24 @@
+created: 20151124121426630
+creator: Tobias Beer
+list-after: $:/core/ui/ViewTemplate/body
+modified: 20151124122441673
+modifier: Tobias Beer
+tags: $:/tags/ViewTemplate
+title: $:/.tb/ui/ViewTemplate/examples
+type: text/vnd.tiddlywiki
+
+\define filter() [tag[Examples]]-[!tag<currentTiddler>] [list[$(currentTiddler)$!!examples]]
+\define show-when() $(filter)$ +[limit[1]]
+\define examples-list()
+<dl>
+<$list filter="$(filter)$">
+<dt><$link to=<<currentTiddler>>><$view field=title/></$link></dt>
+<dd>@@color:grey;//{{!!summary}}//@@</dd>
+</$list>
+</dl>
+\end
+
+<$list filter=<<show-when>> variable="none">
+<h2>Examples</h2>
+<<examples-list>>
+</$list>

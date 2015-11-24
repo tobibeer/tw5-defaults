@@ -1,0 +1,8 @@
+tags: $:/tags/TopLeftBar
+title: $:/.tb/ui/ViewTemplate/menu
+
+<div class="main-menu">
+<$list filter="[list[Welcome!!menu]]" variable="item">
+<$tiddler tiddler=<<item>>><$link><$view field="caption"><$view field="title"/></$view></$link><span class="divider"/></$tiddler>
+</$list>
+</div>

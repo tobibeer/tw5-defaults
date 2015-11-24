@@ -1,0 +1,11 @@
+list-after: $:/core/ui/ViewTemplate/tags
+summary: shows a summary or link
+tags: $:/tags/ViewTemplate
+title: $:/.tb/ui/ViewTemplate/summary-link
+
+<$list filter="[all[current]has[summary]]">
+@@color:grey; //<$transclude field="summary" mode="block"/> //@@
+</$list>
+<$list filter="[all[current]has[url]]">
+<$transclude field="url" mode="block"/>
+</$list>

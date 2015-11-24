@@ -1,0 +1,16 @@
+created: 20141122165208913
+creator: Tobias Beer
+list-after: $:/core/ui/ViewTemplate/body
+modified: 20150115090527118
+modifier: Tobias Beer
+tags: $:/tags/ViewTemplate
+title: $:/.tb/ui/ViewTemplate/source
+
+<$list filter="[all[current]tag[$:/tags/ShowSource]]
+[all[current]prefix[$:/.tb/]]
+[all[current]prefix[$:/template/]]
+[all[current]prefix[$:/styles/]]
+-[has[type]]
++[limit[1]]">
+<pre><$view tiddler=<<currentTiddler>> format="text"/></pre>
+</$list>

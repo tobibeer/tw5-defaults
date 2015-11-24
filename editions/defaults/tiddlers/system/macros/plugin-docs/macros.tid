@@ -1,0 +1,34 @@
+created: 20151123080831360
+creator: Tobias Beer
+modified: 20151123102046740
+modifier: Tobias Beer
+tags: $:/tags/Macro
+title: $:/.tb/macros/plugin-docs
+type: text/vnd.tiddlywiki
+
+\define plugin-author() tobibeer
+\define plugin-docs(plugin)
+<$vars plugin="$plugin$">
+//<$transclude tiddler= <<plugin-tiddler>> field="description"/>//
+<<plugin-docs-tabs>>
+</$vars>
+\end
+\define plugin-tiddler() $:/plugins/$(plugin-author)$/$(plugin)$
+\define plugin-docs-state() $:/state/plugin-docs/$(plugin-author)$/$(plugin)$
+\define plugin-docs-tab()
+<$transclude tiddler="$(currentTiddler)$-$(currentTab)$" mode="block"/>
+\end
+\define plugin-docs-tabs()
+<$macrocall $name="tabs" state=<<plugin-docs-state>> tabsList={{!!tabs}} default="Info" template="$:/.tb/macros/plugin-docs/tab-template"/>
+\end
+\define plugin-docs-cp-state() $:/state/plugin-docs/default/$(plugin-author)$/$(plugin)$
+\define plugin-docs-cp-tiddler() $:/plugins/$(plugin-author)$/$(plugin)$
+\define plugin-docs-cp(plugin)
+<h2>Plugin Info</h2>
+//as displayed in the [[control panel|$:/ControlPanel]]://
+<$vars plugin="$plugin$">
+<$tiddler tiddler=<<plugin-docs-cp-tiddler>>>
+<$macrocall $name="tabs" state=<<plugin-docs-cp-state>> tabsList={{!!list}} default="readme" template="$:/core/ui/PluginInfo"/>
+</$tiddler>
+</$vars>
+\end
