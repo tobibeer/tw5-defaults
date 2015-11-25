@@ -1,10 +1,11 @@
 created: 20141202200448128
 creator: Tobias Beer
-modified: 20141220145954197
+modified: 20151124164339680
 modifier: Tobias Beer
 summary: the [[list-search]] macro allows to filter list outputs
 tags: $:/tags/Macro
 title: $:/.tb/macros/list-search
+type: text/vnd.tiddlywiki
 
 \define list-search(
 filter:"[tags[]]",

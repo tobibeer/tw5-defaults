@@ -1,0 +1,7 @@
+title: $:/.tb/ui/ViewTemplate/back-top
+tags: $:/tags/ViewTemplate
+list-after: $:/core/ui/ViewTemplate/body
+
+<div class="back-top">
+<$link to=<<currentTiddler>>><$view field=title/> ^</$link>
+</div>
