@@ -1,0 +1,10 @@
+title: Plugins
+summary: plugins by [[Tobias Beer]]
+
+<dl>
+<<list-search
+filter:"[tag[Plugins]]"
+search:"search:description"
+state: "$:/temp/list-search/examples"
+template:"$:/.tb/templates/plugin-list">>
+</dl>

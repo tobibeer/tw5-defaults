@@ -1,0 +1,10 @@
+title: Macros
+summary: macro plugins by [[Tobias Beer]]
+
+<dl>
+<<list-search
+filter:"[tag[Macros]]"
+search:"search:description"
+state: "$:/temp/list-search/examples"
+template:"$:/.tb/templates/plugin-list">>
+</dl>

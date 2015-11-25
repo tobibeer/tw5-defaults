@@ -21,7 +21,7 @@ type: text/vnd.tiddlywiki
 </$list>
 </$list>
 <$list filter="[all[current]regexp:title[-]]" variable="none">
-<$list filter="[tag[Plugins]]" variable="plugin">
+<$list filter="[prefix[$:/plugins/tobibeer/]]" variable="plugin">
 <$list filter="[all[current]removeprefix<prefix>]">
 <$tiddler tiddler=<<plugin>>>
 <$link><$view field="title"/></$link> <<title-popup>>
