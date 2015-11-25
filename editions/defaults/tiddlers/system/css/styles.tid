@@ -29,6 +29,20 @@ margin:0;
 fill:#bbb;
 }
 
+.title-popup > p {
+margin:7px 3px;
+}
+
+.title-popup a {
+margin:3px 0;
+font-size:0.5em;
+display:block;
+}
+
+.btn-title-popup {
+color:#ccc;
+}
+
 .tb-taglist-columns{
 column-count: 4;
 -moz-column-count: 4;

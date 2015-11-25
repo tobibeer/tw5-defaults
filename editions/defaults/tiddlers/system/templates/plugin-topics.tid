@@ -1,0 +1,10 @@
+title: $:/.tb/templates/plugin-topics
+
+\define prefix() $(plugin)$-
+
+<$link><$view field="title"/></$link>
+<hr>
+<$vars plugin=<<currentTiddler>>>
+<$list filter="[prefix<prefix>]">
+<$link><$list filter="[all[current]removeprefix<prefix>]"><$view field="title"/></$list></$link></$list>
+</$vars>

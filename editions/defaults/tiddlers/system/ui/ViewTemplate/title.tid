@@ -1,0 +1,32 @@
+created: 20151125135422305
+creator: Tobias Beer
+modified: 20151125144547565
+modifier: Tobias Beer
+tags: 
+title: $:/.tb/ui/ViewTemplate/title
+type: text/vnd.tiddlywiki
+
+\define title-popup() <<pop » "$:/.tb/templates/plugin-topics" "pretty pop-tiddler title-popup" btn-class:"tc-btn-invisible btn-title-popup">>
+\define prefix-plugin() $(currentTiddler)$-
+\define prefix() $(plugin)$-
+
+<$list filter="[all[current]!regexp:title[-]]">
+<$set name="tv-wikilinks" value={{$:/config/Tiddlers/TitleLinks}}>
+<$link>
+<$view field="title"/>
+</$link>
+</$set>
+<$list filter="[prefix<prefix-plugin>limit[1]]" variable="none">
+<<title-popup>>
+</$list>
+</$list>
+<$list filter="[all[current]regexp:title[-]]" variable="none">
+<$list filter="[tag[Plugins]]" variable="plugin">
+<$list filter="[all[current]removeprefix<prefix>]">
+<$tiddler tiddler=<<plugin>>>
+<$link><$view field="title"/></$link> <<title-popup>>
+</$tiddler>
+<$view field="title"/>
+</$list>
+</$list>
+</$list>
