@@ -1,0 +1,11 @@
+title: $:/.tb/macros/lnk
+tags: $:/tags/Macro
+
+\define lnk(title)
+<$reveal type="match" default="" text="""$title$""">
+<$link><$view field="title"/></$link>
+</$reveal>
+<$reveal type="nomatch" default="" text="""$title$""">
+<$link to="""$title"""><$view field="title"/></$link>
+</$reveal>
+\end
