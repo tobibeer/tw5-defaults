@@ -1,11 +1,13 @@
-created: 20141119102634212
-creator: Tobias Beer
 list-after: $:/themes/tiddlywiki/vanilla/base
-modified: 20151122172347817
-modifier: Tobias Beer
 tags: $:/tags/Stylesheet
 title: $:/.tb/styles
 type: text/css
+
+.tc-tiddler-body {
+	clear: both;
+}
+
+/* LINKS */
 
 a.tc-tiddlylink-shadow {
 color:#567;
@@ -16,14 +18,21 @@ a.tc-tiddlylink-resolves.tc-tiddlylink-shadow {
 font-weight:bold;
 }
 
-.tc-tiddler-body {
-	clear: both;
+.redirected {
+color:#dd1144;
 }
 
-.tc-tiddler-body .tc-tag-list-item,
-.tc-tiddler-body .tc-tag-label{
-margin:0;
+.tb-links dd span:not(:last-child):after{
+content:", ";
 }
+
+.tb-links > a:not(:last-child):after{
+content:", ";
+display:inline-block;
+}
+
+
+/* TITLE */
 
 .tc-tiddler-title-icon > svg{
 fill:#bbb;
@@ -42,6 +51,9 @@ display:block;
 .btn-title-popup {
 color:#ccc;
 }
+
+
+/* TAGLIST */
 
 .tb-taglist-columns{
 column-count: 4;
@@ -71,6 +83,9 @@ display:inline-block;
 padding-top:5px;
 }
 
+
+/* TIMELINE */
+
 .tb-timeline-item{
 margin:2px -5px 5px -5px;
 padding:2px 5px 5px 5px;
@@ -98,18 +113,8 @@ font-size:0.8em;
 margin-right: 3px;
 }
 
-.tb-thumbs{
-width: 160px;
-margin: 0 10px 10px 0;
-}
 
-.redirected {
-color:#dd1144;
-}
-
-.tb-links dd span:not(:last-child):after{
-content:", ";
-}
+/* TABLES */
 
 tr, td, th {
 vertical-align:top;
@@ -122,10 +127,8 @@ vertical-align:top;
 border:0;
 }
 
-.warn,
-.warn a {
-color: #dd1144;
-}
+
+/* DEFINITIONS */
 
 dl:not(.tb5-markup){
 margin:0;
@@ -143,12 +146,18 @@ content: "» ";
 content:none;
 }
 
+
+/* SLIDERS */
+
 div.slider-contents{
 padding: 5px;
 border: 1px solid #eee;
 background: #fcfcfc;
 border-radius:3px;
 }
+
+
+/* LISTS */
 
 ol ol {
 list-style-type: lower-alpha;
@@ -158,14 +167,17 @@ ol ol ol{
 list-style-type: decimal;
 }
 
+.tc-tiddler-body .tc-tag-list-item,
+.tc-tiddler-body .tc-tag-label{
+margin:0;
+}
+
 .tc-search-results {
 padding-top: 0;
 }
 
-.summary {
-font-style:italic;
-color:grey;
-}
+
+/* CONTACT */
 
 form.contact {
 width:100%;
@@ -208,14 +220,8 @@ width: 600px;
 height: 1000px;
 }
 
-.note {
-padding: 10px;
-background: #fcfcfc;
-border-radius: 15px;
-border: 1px solid #ccc;
-}
 
-
+/* BACK TO TOP */
 
 .back-top{
 float:right;
@@ -228,4 +234,29 @@ color:#ddd;
 
 .back-top a:hover{
 color:#999;
+}
+
+
+/* INFO BOXES */
+
+.note {
+padding: 10px;
+background: #fcfcfc;
+border-radius: 15px;
+border: 1px solid #ccc;
+}
+
+.warn,
+.warn a {
+color: #dd1144;
+}
+
+.summary {
+font-style:italic;
+color:grey;
+}
+
+.tb-thumbs{
+width: 160px;
+margin: 0 10px 10px 0;
 }
