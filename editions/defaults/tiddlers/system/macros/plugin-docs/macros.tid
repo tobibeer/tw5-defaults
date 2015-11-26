@@ -6,6 +6,7 @@ tags: $:/tags/Macro
 title: $:/.tb/macros/plugin-docs
 type: text/vnd.tiddlywiki
 
+\define plugin-install(plugin) drag to your wiki, save, reload: $:/plugins/tobibeer/$plugin$
 \define plugin-author() tobibeer
 \define plugin-docs(plugin)
 <$vars plugin="$plugin$">
