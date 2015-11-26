@@ -2,7 +2,9 @@
     "description": "tobibeer's defaults for TiddlyWiki",
     "plugins": [
         "tiddlywiki/tiddlyweb",
-        "tiddlywiki/filesystem"
+		"tiddlywiki/filesystem",
+		"tiddlywiki/highlight",
+		"felixhayashi/topstoryview"
     ],
     "themes": [
         "tiddlywiki/vanilla",
