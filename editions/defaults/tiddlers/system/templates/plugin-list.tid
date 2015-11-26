@@ -1,5 +1,10 @@
+created: 20151126200201056
+creator: Tobias Beer
+modified: 20151126200438342
 title: $:/.tb/templates/plugin-list
+type: text/vnd.tiddlywiki
 
-\define plugin() $:/plugins/tobibeer/$(currentTiddler)$
-<dt><$link>tobibeer/{{!!title}}</$link></dt>
-<dd><$transclude tiddler=<<plugin>> field="description"/></dd>
+<$list filter="[all[current]removeprefix[$:/plugins/tobibeer/]]" variable="plugin">
+<dt><$link to=<<plugin>>>tobibeer/<<plugin>></$link></dt>
+<dd><$transclude tiddler=<<currentTiddler>> field="description"/></dd>
+</$list>
