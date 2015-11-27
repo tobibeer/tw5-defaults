@@ -5,10 +5,8 @@ modifier: Tobias Beer
 title: Welcome
 type: text/vnd.tiddlywiki
 
-\define docs() http://tobibeer.github.io/tw5-plugins#$(title)$
-
 This is the documentation wiki for the TiddlyWiki plugin: <$vars title={{$:/SiteTitle}}>
-<a href=<<docs>> target="_blank">tobibeer/<<title>></a>
+<$link to=<<title>>>tobibeer/<<title>></$link>
 <$tiddler tiddler=<<title>>>
 <$transclude mode="block"/>
 </$tiddler>
