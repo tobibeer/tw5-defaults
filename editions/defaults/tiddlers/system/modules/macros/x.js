@@ -33,7 +33,7 @@ exports.run = function(title,pretty) {
 		text = pretty || title || target,
 		url = (this.getVariable("x-url") || "http://tiddlywiki.com") + "#" + encodeURIComponent(target);
 
-	return "[ext[" + text + "|" + url + "]]";
+	return "<a href=\"" + url + "\" target=\"_blank\"><$text text=\"" + text + "\"/></a>";
 };
 
 })();
