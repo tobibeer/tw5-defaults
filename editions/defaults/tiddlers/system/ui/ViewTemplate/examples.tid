@@ -24,6 +24,6 @@ template:"$:/.tb/ui/ViewTemplate/examples/item">>
 </dl>
 \end
 
-<$list filter=<<show-when>> variable="none">
+<$list filter=<<show-when>> variable="X">
 <<examples-list>>
 </$list>
