@@ -8,24 +8,34 @@ type: text/vnd.tiddlywiki
 \define title-popup() <<pop » "$:/.tb/templates/plugin-topics" "pretty pop-tiddler title-popup" btn-class:"tc-btn-invisible btn-title-popup">>
 \define prefix-plugin() $(currentTiddler)$-
 \define prefix() $(plugin)$-
-
-<$list filter="[all[current]!regexp:title[-]]">
+\define basic-title()
 <$set name="tv-wikilinks" value={{$:/config/Tiddlers/TitleLinks}}>
 <$link>
 <$view field="title"/>
 </$link>
 </$set>
-<$list filter="[prefix<prefix-plugin>limit[1]]" variable="none">
-<<title-popup>>
-</$list>
-</$list>
-<$list filter="[all[current]regexp:title[-]]" variable="none">
-<$list filter="[tag[Plugins]]" variable="plugin">
+\end
+
+<$list filter="[all[current]addprefix[$:/plugins/tobibeer/]is[tiddler]]" variable="pluginTiddler">
 <$list filter="[all[current]removeprefix<prefix>]">
 <$tiddler tiddler=<<plugin>>>
 <$link><$view field="title"/></$link> <<title-popup>>
 </$tiddler>
 <$view field="title"/>
 </$list>
+<$list filter="[<plugin>addprefix[$:/plugins/tobibeer/]!is[tiddler]]" variable="X">
+<<basic-title>>
+</$list>
+</$list>
+<$list filter="[all[current]addprefix[$:/plugins/tobibeer/]!is[tiddler]]" variable="X">
+<$list filter="[all[current]splitbefore[-]]" variable="plugin">
+<$list filter="[<plugin>addprefix[$:/plugins/tobibeer/]is[tiddler]]" variable="pluginTiddler">
+<$tiddler tiddler=<<pluginTiddler>>><<basic-title>></$tiddler>
+<$list filter="[prefix<prefix-plugin>!is[current]limit[1]]" variable="X">
+<<title-popup>>
+</$list>
+</$list>
+<$list filter="[<plugin>addprefix[$:/plugins/tobibeer/]!is[tiddler]]" variable="X">
+<<basic-title>>
 </$list>
 </$list>
