@@ -11,6 +11,5 @@ type: text/vnd.tiddlywiki
 <$button popup=<<state>> class="pop-btn $btn-class$" tooltip="$tooltip$" tag="$btn-tag$" selectedClass="pop-btn-selected $btn-selectedClass$">$label$</$button><$reveal type="popup" state=<<state>> animate="$animate$" position="$position$" class="tc-popup pop-popup $pop-class$" style="$pop-style$">
 
 {{||$content$}}
-</$reveal>
-</$set>
+</$reveal></$set>
 \end
