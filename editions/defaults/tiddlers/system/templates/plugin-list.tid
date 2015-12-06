@@ -1,10 +1,11 @@
 created: 20151126200201056
 creator: Tobias Beer
-modified: 20151126200438342
+modified: 20151206203117530
+modifier: Tobias Beer
 title: $:/.tb/templates/plugin-list
 type: text/vnd.tiddlywiki
 
 <$list filter="[all[current]removeprefix[$:/plugins/tobibeer/]]" variable="plugin">
-<dt><$link to=<<plugin>>>tobibeer/<<plugin>></$link></dt>
+<dt><$link to=<<plugin>>>tobibeer/<<plugin>></$link>@@.tb-links.float-right.weight-normal tags: {{{ [title<plugin>tags[]!title<currentTag>sort[title]] }}}@@</dt>
 <dd><$transclude tiddler=<<currentTiddler>> field="description"/></dd>
 </$list>
