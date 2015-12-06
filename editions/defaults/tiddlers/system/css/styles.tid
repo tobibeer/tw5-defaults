@@ -4,8 +4,17 @@ title: $:/.tb/styles
 type: text/css
 
 .tc-tiddler-body {
-	clear: both;
+clear: both;
 }
+
+.float-right {
+float:right;
+}
+
+.weight-normal{
+font-weight:normal;
+}
+
 
 /* LINKS */
 
@@ -23,14 +32,16 @@ color:#dd1144;
 }
 
 .tb-links dd span:not(:last-child):after{
-content:", ";
+content:", ";
+}
+
+.tb-links > span:not(:last-child):after{
+content:", ";
 }
 
 .tb-links > a:not(:last-child):after{
-content:", ";
-display:inline-block;
+content:", ";
 }
-
 
 /* TITLE */
 
@@ -50,6 +61,7 @@ display:block;
 
 .btn-title-popup {
 color:#ccc;
+border-bottom:0 !important;
 }
 
 

@@ -1,0 +1,25 @@
+title: $:/.tb/styles/todo
+tags: $:/tags/Stylesheet
+
+.todo ul,
+.todo li{
+margin:0;
+list-style-type:none;
+}
+
+.todo li:before{
+content: "✗";
+color: #933;
+display:inline-block;
+width:20px;
+margin-left: -20px;
+}
+
+.todo .ok:before {
+content: "✓";
+color: #393;
+}
+
+.todo .ok {
+color:#060;
+}
