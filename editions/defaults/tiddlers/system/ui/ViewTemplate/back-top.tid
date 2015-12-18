@@ -1,6 +1,10 @@
-title: $:/.tb/ui/ViewTemplate/back-top
+created: 20151208012218818
+creator: Tobias Beer
+modified: 20151208012221331
+modifier: Tobias Beer
 tags: $:/tags/ViewTemplate
-list-after: $:/core/ui/ViewTemplate/body
+title: $:/.tb/ui/ViewTemplate/back-top
+type: text/vnd.tiddlywiki
 
 <div class="back-top">
 <$link to=<<currentTiddler>>><$view field=title/> ^</$link>

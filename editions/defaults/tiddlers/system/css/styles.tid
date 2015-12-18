@@ -1,4 +1,8 @@
+created: 20151216093531635
+creator: Tobias Beer
 list-after: $:/themes/tiddlywiki/vanilla/base
+modified: 20151216093545129
+modifier: Tobias Beer
 tags: $:/tags/Stylesheet
 title: $:/.tb/styles
 type: text/css
@@ -276,4 +280,13 @@ color:grey;
 .tb-thumbs{
 width: 160px;
 margin: 0 10px 10px 0;
+}
+
+.grey-svg svg{
+fill:lightgrey;
+height:12px !important;
+}
+
+.grey-svg:hover svg{
+fill:grey;
 }
