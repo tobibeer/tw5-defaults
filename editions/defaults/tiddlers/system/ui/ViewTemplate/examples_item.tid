@@ -1,12 +1,12 @@
 created: 20150116225310488
 creator: Tobias Beer
-modified: 20151124163840714
+modified: 20160107104657116
 modifier: Tobias Beer
 tags: 
 title: $:/.tb/ui/ViewTemplate/examples/item
 type: text/vnd.tiddlywiki
 
-<dt><$link><$view field=title/></$link></dt>
+<dt><$link><$view field=title/></$link><$transclude tiddler="$:/.tb/templates/list-tags" mode=inline/></dt>
 <dd>@@color:grey;//{{!!summary}}//@@</dd>
 <$list filter="[[Parameters]tagging[]]+[all[current]tags[]]+[tag[Parameters]]+[limit[1]]" variable=none>
 <dd>@@color:#666;parameters:@@ <span class="example-parameters"><$list filter="[[Parameters]tagging[]]+[all[current]tags[]]+[tag[Parameters]]"/></span></dd>

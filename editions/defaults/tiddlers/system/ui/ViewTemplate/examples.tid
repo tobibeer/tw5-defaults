@@ -2,15 +2,18 @@ created: 20151124163323041
 creator: Tobias Beer
 list-after: $:/core/ui/ViewTemplate/body
 list-before: $:/.tb/ui/ViewTemplate/back-top
-modified: 20151124164331239
+modified: 20160107113117911
 modifier: Tobias Beer
 tags: $:/tags/ViewTemplate
 title: $:/.tb/ui/ViewTemplate/examples
 type: text/vnd.tiddlywiki
 
 \define state() $:/state/list-search/examples/$(currentTiddler)$
-\define filter() [tag[Examples]]-[!tag<currentTiddler>] [list[$(currentTiddler)$!!examples]]
+
+\define filter() [tag[Examples]]-[!tag<currentTiddler>] [list[$(currentTiddler)$!!examples]] +[sort[title]]
+
 \define show-when() $(filter)$ +[limit[1]]
+
 \define examples-list()
 <$list filter="[all[current]!field:title[Examples]]">
 <h2>Examples</h2>

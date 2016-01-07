@@ -1,4 +1,16 @@
-title: Plugins
+created: 20160107104305347
+creator: Tobias Beer
+modified: 20160107104417000
+modifier: Tobias Beer
 summary: plugins by [[Tobias Beer]]
+title: Plugins
+type: text/vnd.tiddlywiki
+
+<$list filter="Examples Filters Macros Libraries Plugins Widgets">
+<div class="tb-taglist-item">
+<small class="tc-menu-list-count"><$count filter="[all[current]tagging[]]"/></small>
+<$transclude tiddler="$:/.tb/templates/TagTemplate"/>
+</div>
+</$list>
 
 <<list-plugins>>
