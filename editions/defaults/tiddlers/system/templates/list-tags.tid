@@ -1,0 +1,13 @@
+created: 20150106210703633
+creator: Tobias Beer
+modified: 20160107104728481
+modifier: Tobias Beer
+title: $:/.tb/templates/list-tags
+type: text/vnd.tiddlywiki
+
+<span class="tc-tags-wrapper" style="float:right;">
+<$list
+filter="[all[current]tags[]sort[title]] -Examples"
+template="$:/core/ui/TagTemplate"
+storyview="pop"/>
+</span>
