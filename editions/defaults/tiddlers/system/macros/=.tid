@@ -1,0 +1,12 @@
+created: 20160112160043010
+creator: Tobias Beer
+modified: 20160112160141725
+modifier: Tobias Beer
+summary: evaluates any given text as the macro body passing additional parameters
+tags: $:/tags/Macro
+title: $:/.tb/macros/=
+type: text/vnd.tiddlywiki
+
+\define =(text,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,19,20)
+$text$
+\end
