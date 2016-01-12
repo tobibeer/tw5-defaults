@@ -1,7 +1,7 @@
 created: 20151216093531635
 creator: Tobias Beer
 list-after: $:/themes/tiddlywiki/vanilla/base
-modified: 20151216093545129
+modified: 20160110075513752
 modifier: Tobias Beer
 tags: $:/tags/Stylesheet
 title: $:/.tb/styles
@@ -15,12 +15,14 @@ clear: both;
 float:right;
 }
 
-.weight-normal{
-font-weight:normal;
-}
-
-
 /* LINKS */
+
+a{
+	-webkit-transition: 200ms;
+    -moz-transition: 200ms;
+    -o-transition: 200ms;
+    transition: 200ms;
+}
 
 a.tc-tiddlylink-shadow {
 color:#567;
@@ -102,6 +104,12 @@ text-align:right;
 .tb-taglist-item{
 display:inline-block;
 padding-top:5px;
+}
+
+.list-tags {
+float:right;
+font-weight:normal;
+color:#ccc;
 }
 
 
