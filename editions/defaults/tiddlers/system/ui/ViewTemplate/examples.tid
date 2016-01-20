@@ -14,6 +14,7 @@ type: text/vnd.tiddlywiki
 [tag[Examples]]-[!tag<currentTiddler>]
 [all[current]removesuffix[-Examples]tagging[]tag[Examples]]
 [list[$(currentTiddler)$!!examples]]
+-[all[current]]
 +[sort[title]]
 \end
 
