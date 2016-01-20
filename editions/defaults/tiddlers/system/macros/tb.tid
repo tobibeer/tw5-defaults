@@ -6,7 +6,7 @@ summary: points to my plugin
 <$list filter="[[$plugin$]is[tiddler]]"
 >[[tobibeer/$plugin$|$plugin$]]</$list><$list
 filter="[[$plugin$]!is[tiddler]]"
-><$vars x-url="tobibeer.github.io/tw5-plugins"
+><$vars x-url="http://tobibeer.github.io/tw5-plugins"
 ><$macrocall $name="x" title="$plugin$" pretty="tobibeer/$plugin$"
 /></$vars></$list>
 \end
