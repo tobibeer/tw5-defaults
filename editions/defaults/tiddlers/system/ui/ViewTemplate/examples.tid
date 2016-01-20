@@ -10,7 +10,12 @@ type: text/vnd.tiddlywiki
 
 \define state() $:/state/list-search/examples/$(currentTiddler)$
 
-\define filter() [tag[Examples]]-[!tag<currentTiddler>] [list[$(currentTiddler)$!!examples]] +[sort[title]]
+\define filter()
+[tag[Examples]]-[!tag<currentTiddler>]
+[all[current]removesuffix[-Examples]tagging[]tag[Examples]]
+[list[$(currentTiddler)$!!examples]]
++[sort[title]]
+\end
 
 \define show-when() $(filter)$ +[limit[1]]
 
