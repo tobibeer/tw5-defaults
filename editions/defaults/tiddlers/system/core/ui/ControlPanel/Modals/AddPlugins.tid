@@ -6,7 +6,7 @@ issue: 2245
 
 \define install-plugin-button()
 <$button>
-<$action-sendmessage $message="tm-load-plugin-from-library" url={{!!url}} title={{$(assetInfo)$!!original-title}}/>
+<$action-sendmessage $message="tm-load-plugin-from-library" url={{$(connectionTiddler)$!!url}} title={{$(assetInfo)$!!original-title}}/>
 <$list filter="[<assetInfo>get[original-title]get[version]]" variable="installedVersion" emptyMessage="""{{$:/language/ControlPanel/Plugins/Install}}""">
 {{$:/language/ControlPanel/Plugins/Reinstall}}
 </$list>
