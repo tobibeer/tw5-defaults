@@ -8,6 +8,6 @@ type: text/vnd.tiddlywiki
 <$vars titlePrefix="tobibeer/">
 <$list filter="[all[current]removeprefix[$:/plugins/tobibeer/]]" variable="plugin">
 <dt><$tiddler tiddler=<<plugin>>>{{||$:/.tb/ui/ViewTemplate/title}}</$tiddler>@@.tb-links.list-tags tags: {{{ [title<plugin>tags[]!title<currentTag>sort[title]] }}}@@</dt>
-<dd><$transclude tiddler=<<currentTiddler>> field="description"/></dd>
+<dd>{{!!description}}</dd>
 </$list>
 </$vars>
