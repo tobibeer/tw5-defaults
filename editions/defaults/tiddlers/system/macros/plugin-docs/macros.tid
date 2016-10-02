@@ -7,7 +7,7 @@ title: $:/.tb/macros/plugin-docs
 type: text/vnd.tiddlywiki
 
 \define plugin-install(plugin)
-drag to your wiki, save, reload: $:/plugins/tobibeer/$plugin$
+get it from my [[Library]] or drag to your wiki, save, reload: $:/plugins/tobibeer/$plugin$
 
 ; source code
 : http://github.com/tobibeer/tw5-$plugin$
