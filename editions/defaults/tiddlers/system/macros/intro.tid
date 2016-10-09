@@ -1,4 +1,4 @@
-modified: 20161009114604130
+modified: 20161009143434433
 modifier: Tobias Beer
 summary: extracts an introduction from a tiddler
 tags: $:/tags/Macro
@@ -6,14 +6,21 @@ title: $:/.tb/macros/intro
 
 \define intro(tiddler)
 <$set name="tiddler" filter="[field:title[$tiddler$]]" emptyValue=<<currentTiddler>>>
-<$list filter="
-[<tiddler>get[text]split:pos=2[<!--:]split:first[-->]limit[1]]
+<$list filter='
+[<tiddler>get[text]split:pos=2[<<intro: """]split:first[""">>]limit[1]]
 [<tiddler>get[summary]]
-+[limit[1]]">
++[limit[1]]'>
 <div style="color:grey;font-style:italic">
 
 <<currentTiddler>>
 </div>
 </$list>
 </$set>
+\end
+
+\define intro:(text,show)
+<$reveal type="match" text="$show$" default="show">
+
+$text$
+</$reveal>
 \end
