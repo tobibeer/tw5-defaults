@@ -1,11 +1,13 @@
 created: 20160120130410512
 creator: Tobias Beer
-
+modified: 20170119184251169
 modifier: Tobias Beer
 summary: keeping up to date and fetching the latest and greatest from [[tobibeer/plugins|Plugins]]
 tags: 
 title: Library
 type: text/vnd.tiddlywiki
+
+@@color:purple;''Important'': Adding my library does not pre-install any of my plugins in your wiki but just adds a reference to it, i.e. you need internet access to actually install plugins from it.@@
 
 Drag this tiddler to your wiki to access my plugin library from your [[control panel|$:/ControlPanel]]: $:/pluginlibrary/tobibeer/official
 
